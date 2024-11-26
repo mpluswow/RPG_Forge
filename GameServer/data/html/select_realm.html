@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Select Realm{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/data/css/select_realm.css">
+<div class="realm-container">
+    <h1>Select a Realm</h1>
+    <p>Welcome, {{ user.username }}! Manage your existing realms or join new ones.</p>
+
+    <div class="realm-lists">
+        <!-- Your Realms Dropdown -->
+        <div class="realm-dropdown">
+            <h2>Your Realms</h2>
+            {% if user_realms %}
+                <select id="your-realms" onchange="redirectToRealm(this.value)">
+                    <option value="" disabled selected>Select a Realm</option>
+                    {% for realm in user_realms %}
+                        <option value="/realm/{{ realm.id }}">{{ realm.name }} ({{ realm.population }}/300)</option>
+                    {% endfor %}
+                </select>
+            {% else %}
+                <p>You have not joined any realms yet.</p>
+            {% endif %}
+        </div>
+
+        <!-- Available Realms -->
+        <div class="realm-list">
+            <h2>Available Realms</h2>
+            {% if available_realms %}
+                <ul class="realms">
+                    {% for realm in available_realms %}
+                        <li class="realm-item">
+                            <h3>{{ realm.name }}</h3>
+                            <p>Population: {{ realm.population }}/300</p>
+                            <button onclick="location.href='/join-realm/{{ realm.id }}'">Join Realm</button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>All realms are full or unavailable.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    function redirectToRealm(url) {
+        if (url) {
+            window.location.href = url;
+        }
+    }
+</script>
+{% endblock %}

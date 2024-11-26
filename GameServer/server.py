@@ -1,6 +1,6 @@
 import os
 import configparser
-from flask import Flask, current_app
+from flask import Flask, render_template, current_app
 from flask_login import LoginManager
 from modules import load_blueprints
 from modules.db_models.account import db, Account
@@ -70,9 +70,9 @@ def load_user(user_id):
     with current_app.app_context():
         return db.session.get(Account, int(user_id)) 
 
-@app.route('/home')
+@app.route('/')
 def home():
-    return "Welcome to the Home Page! This is a placeholder."
+    return render_template('index.html')
 
 # Load and register blueprints
 load_blueprints(app)

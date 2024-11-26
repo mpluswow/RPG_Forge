@@ -1,0 +1,135 @@
+/* General Styles */
+.realm-container {
+    max-width: 1200px;
+    margin: 80px auto; /* Adjust for navbar height */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.realm-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.realm-container p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Dropdown List for Your Realms */
+.realm-dropdown {
+    background-color: #1f1f1f;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.realm-dropdown h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.realm-dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.realm-dropdown select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Available Realms */
+.realm-list {
+    background-color: #1f1f1f;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.realm-list h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.realm-list p {
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Realms */
+.realms {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.realm-item {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realm-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.realm-item p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.realm-item button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.realm-item button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.realm-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .realm-lists {
+        flex-direction: column;
+    }
+
+    .realm-list,
+    .realm-dropdown {
+        width: 100%;
+    }
+}
