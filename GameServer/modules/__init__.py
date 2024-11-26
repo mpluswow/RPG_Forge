@@ -6,6 +6,10 @@ def load_blueprints(app):
     for filename in os.listdir(blueprints_dir):
         if filename.endswith('.py') and filename != '__init__.py':
             module_name = f"modules.blueprints.{filename[:-3]}"
-            module = importlib.import_module(module_name)
-            if hasattr(module, 'blueprint'):
-                app.register_blueprint(module.blueprint)
+            try:
+                module = importlib.import_module(module_name)
+                if hasattr(module, 'blueprint'):
+                    app.register_blueprint(module.blueprint)
+                    print(f"Registered blueprint: {module_name}")
+            except Exception as e:
+                print(f"Failed to register blueprint {module_name}: {e}")
