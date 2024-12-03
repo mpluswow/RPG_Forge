@@ -14,7 +14,7 @@ sudo apt update && sudo apt upgrade -y
 
 ### 1.2 Install Required Software
 ```bash
-sudo apt install python3 python3-pip python3-venv nginx git && sudo apt install mysql-server libmysqlclient-dev pkg-config python3-dev build-essential -y
+sudo apt install python3 python3-pip python3-venv nginx git -y && sudo apt install mysql-server libmysqlclient-dev pkg-config python3-dev build-essential -y
 ```
 
 ### 1.3 Create DB User
