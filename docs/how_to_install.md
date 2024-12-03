@@ -59,8 +59,14 @@ cd gameServer
 ```
 
 ### 2.2 Set Up a Virtual Environment
+
+Create:
 ```bash
 python3 -m venv venv
+```
+
+Activate :
+```bash
 source venv/bin/activate
 ```
 
