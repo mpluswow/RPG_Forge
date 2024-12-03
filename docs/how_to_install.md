@@ -14,9 +14,27 @@ sudo apt update && sudo apt upgrade -y
 
 ### 1.2 Install Required Software
 ```bash
-sudo apt install python3 python3-pip python3-venv nginx git -y
+sudo apt install python3 python3-pip python3-venv nginx git && sudo apt install mysql-server libmysqlclient-dev pkg-config python3-dev build-essential -y
 ```
 
+### 1.3 Create DB User
+
+Log in to MySQL as root:
+
+```bash
+sudo mysql -u root -p
+```
+Create the DB User:
+
+```sql
+CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
+```
+
+Grant privileges to all databases:
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'your_username'@'localhost' WITH GRANT OPTION;
+```
 ---
 
 ## 2. Set Up the Flask Application
@@ -37,23 +55,9 @@ source venv/bin/activate
 ```bash
 pip install flask gunicorn
 ```
-
-### 2.4 Create a Flask App
+### 2.4 Install Required Packages
 ```bash
-nano app.py
-```
-Add this code:
-```python
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Welcome to gameServer!"
-
-if __name__ == "__main__":
-    app.run()
+pip install -r requirements.txt
 ```
 
 ### 2.5 Test the Flask App
