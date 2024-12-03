@@ -52,7 +52,10 @@ exit
 git clone https://github.com/mpluswow/RPG_Forge.git
 ```
 ```bash
-cp -r RPG_Forge/GameServer gameServer 
+cp -r RPG_Forge/GameServer gameServer
+```
+```bash
+cd gameServer
 ```
 
 ### 2.2 Set Up a Virtual Environment
