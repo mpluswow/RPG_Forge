@@ -35,14 +35,24 @@ Grant privileges to all databases:
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'your_username'@'localhost' WITH GRANT OPTION;
 ```
+
+```sql
+FLUSH PRIVILEGES;
+```
+
+```sql
+exit
+```
 ---
 
 ## 2. Set Up the Flask Application
 
 ### 2.1 Create the Project Directory
 ```bash
-mkdir ~/gameServer
-cd ~/gameServer
+git clone https://github.com/mpluswow/RPG_Forge.git
+```
+```bash
+cp -r RPG_Forge/GameServer gameServer 
 ```
 
 ### 2.2 Set Up a Virtual Environment
