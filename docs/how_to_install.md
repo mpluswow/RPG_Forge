@@ -124,11 +124,16 @@ server {
 ### 4.2 Enable the Configuration
 ```bash
 sudo ln -s /etc/nginx/sites-available/gameServer /etc/nginx/sites-enabled/
+```
+```bash
 sudo rm /etc/nginx/sites-enabled/default
+```
+```bash
 sudo nginx -t
+```
+```bash
 sudo systemctl restart nginx
 ```
-
 ---
 
 ## 5. Create a Systemd Service for Gunicorn
@@ -158,20 +163,22 @@ WantedBy=multi-user.target
 ### 5.2 Set Permissions for Logs
 ```bash
 sudo touch /var/log/gameServer.log /var/log/gameServer_error.log
+```
+```bash
 sudo chown www-data:www-data /var/log/gameServer*.log
 ```
-
 ---
 
 ## 6. Adjust Permissions
 
-### 6.1 Fix Permissions for the Project Directory
+### 6.1 Permissions for the Project Directory
 ```bash
 sudo chown -R www-data:www-data /home/ubuntu/gameServer
+```
+```bash
 sudo chmod -R 755 /home/ubuntu/gameServer
 ```
-
-### 6.2 Fix Parent Directory Permissions
+### 6.2 Parent Directory Permissions
 ```bash
 sudo chmod 755 /home/ubuntu
 ```
@@ -183,7 +190,11 @@ sudo chmod 755 /home/ubuntu
 ### 7.1 Reload and Start the Service
 ```bash
 sudo systemctl daemon-reload
+```
+```bash
 sudo systemctl start gameServer
+```
+```bash
 sudo systemctl enable gameServer
 ```
 
