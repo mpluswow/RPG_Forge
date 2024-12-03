@@ -55,7 +55,7 @@ source venv/bin/activate
 ```bash
 pip install flask gunicorn
 ```
-### 2.4 Install Required Packages
+### 2.4 Install Required Python Packages
 ```bash
 pip install -r requirements.txt
 ```
