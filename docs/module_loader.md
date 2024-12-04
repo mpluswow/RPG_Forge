@@ -1,4 +1,4 @@
-## Add a New Module
+# Dynamic Module BLueprint Loader
 
 This project dynamically loads all Flask blueprints from the `modules/blueprints` directory. 
 

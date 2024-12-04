@@ -1,5 +1,4 @@
-
-# Dynamic Database Model Loader for Flask Applications
+# Dynamic Database Model Loader
 
 [DB Model Loader](modules/models.py)
 
