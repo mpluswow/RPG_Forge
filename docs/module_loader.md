@@ -2,7 +2,7 @@
 
 This module [Blueprint Loader](../GameServer/modules/__init__.py) dynamically loads all Flask blueprints from the `modules/blueprints` directory. 
 
-Follow the steps below to add a new module to the game.
+Follow the steps below to add a new module to this project.
 
 ---
 
