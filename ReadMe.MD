@@ -10,19 +10,19 @@
 2. **[Setup Instructions](docs/how_to_install.md)**  
    Step-by-step guide to set up the project locally.
 
-3. **[Adding a Module](docs/module_loader.md)**  
-   Instructions for creating and adding a new module to the game.
+3. **[Module BLueprint Loader](docs/module_loader.md)**  
+   Instructions for creating and adding a new module.
 
-4. **[Database Schema](docs/db_model_loader.md)**  
-   Detailed information about the database structure and tables.
+4. **[Database Model Loader](docs/db_model_loader.md)**  
+   Instructions for creating and adding a new database model.
 
-7. **[Contributing](docs/contributing.md)**  
+5. **[Contributing](docs/contributing.md)**  
    Guidelines for contributing to the project.
 
-8. **[FAQs](docs/faqs.md)**  
+6. **[FAQs](docs/faqs.md)**  
    Answers to frequently asked questions.
 
-9. **[Changelog](docs/changelog.md)**  
+7. **[Changelog](docs/changelog.md)**  
    Summary of changes and updates to the project.
 
 ---
