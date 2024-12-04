@@ -57,6 +57,10 @@ cp -r RPG_Forge/GameServer gameServer
 ```bash
 cd gameServer
 ```
+Update app config 
+```bash
+nano conf/server.conf/server
+```
 
 ### 2.2 Set Up a Virtual Environment
 

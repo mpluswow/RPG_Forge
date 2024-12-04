@@ -7,7 +7,7 @@
 1. **[Introduction](docs/introduction.md)**  
    Overview of the project, its purpose, and features.
 
-2. **[Setup Instructions](docs/setup.md)**  
+2. **[Setup Instructions](docs/how_to_install.md)**  
    Step-by-step guide to set up the project locally.
 
 3. **[Adding a Module](docs/adding_module.md)**  
