@@ -18,7 +18,7 @@ It simplifies model management by automatically discovering and importing model 
    - Models are automatically registered with the database through SQLAlchemy when imported.
 
 
-```
+
 
 ### Example Model File
 
