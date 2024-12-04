@@ -10,16 +10,10 @@
 2. **[Setup Instructions](docs/how_to_install.md)**  
    Step-by-step guide to set up the project locally.
 
-3. **[Adding a Module](docs/adding_module.md)**  
+3. **[Adding a Module](docs/module_loader.md)**  
    Instructions for creating and adding a new module to the game.
 
-4. **[Blueprint Loader](docs/blueprint_loader.md)**  
-   Explanation of the dynamic blueprint loading system.
-
-5. **[Routes Overview](docs/routes.md)**  
-   List of all available routes and their functionality.
-
-6. **[Database Schema](docs/database.md)**  
+4. **[Database Schema](docs/db_model_loader.md)**  
    Detailed information about the database structure and tables.
 
 7. **[Contributing](docs/contributing.md)**  
