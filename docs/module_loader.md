@@ -1,6 +1,6 @@
 # Dynamic BLueprint Loader
 
-[Blueprint Loader](./modules/models.py)
+[Blueprint Loader](../GameServer/modules/__init__.py)
 
 This project dynamically loads all Flask blueprints from the `modules/blueprints` directory. 
 
