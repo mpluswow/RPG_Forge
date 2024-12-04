@@ -1,6 +1,6 @@
 # Dynamic Database Model Loader
 
-[DB Model Loader](../modules/models.py)
+[DB Model Loader](./modules/models.py)
 
 This module is designed to dynamically load and register database models from the `db_models` directory. 
 It simplifies model management by automatically discovering and importing model files, ensuring they are integrated with SQLAlchemy.
