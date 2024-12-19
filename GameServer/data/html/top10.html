@@ -1,0 +1,33 @@
+{% block top10 %}
+<div class="top10-container">
+    <div class="top10-section" id="contributors-container">
+        <!-- Title Bar -->
+        <div class="top10-title-bar">
+            <div class="top10-title">
+                <i class="fa fa-users" aria-hidden="true"></i>GITHUB TOP 10 
+            </div>
+        </div>
+        <ul class="top10-list" id="contributors-list">
+            <!-- List items will be dynamically added via JavaScript -->
+        </ul>
+    </div>
+    <div class="top10-section" id="players-container">
+        <!-- Title Bar -->
+        <div class="top10-title-bar">
+            <div class="top10-title">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>PLAYERS TOP 10 
+            </div>
+        </div>
+        <ul class="top10-list" id="players-list">
+            <!-- List items will be dynamically added via JavaScript -->
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Include Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Include CSS and JS -->
+{% block extra_styles %}<link rel="stylesheet" href="data/css/top10.css">{% endblock %}
+{% block extra_scripts %}<script src="data/js/top10.js" defer></script>{% endblock %}

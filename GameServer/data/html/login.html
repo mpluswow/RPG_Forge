@@ -1,5 +1,26 @@
-<form method="POST" action="{{ url_for('auth.login') }}">
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-</form>
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/data/css/login.css">
+<section class="login">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/login" method="POST" class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-actions">
+                <a href="/register" class="secondary-button">Register</a>
+                <button type="submit" class="cta-button">Login</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

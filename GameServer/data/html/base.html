@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Page Title{% endblock %}</title>
-    <link rel="stylesheet" href="/data/css/base.css">
+    <title>{% block title %}DreamerZz - Base Template{% endblock %}</title>
+    <link rel="stylesheet" href="data/css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    {% block extra_styles %}{% endblock %}
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="navbar">
-        <div class="logo">
-            <a href="/">GameName</a>
+        <div class="logo">DreamerZz</div>
+        <div class="hamburger-menu navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
         </div>
         <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul id="menu" class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/login">Login</a></li>
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i>Features</a></li>
+                <li><a href="#GitHub"><i class="fas fa-bullseye"></i>GitHub</a></li>
+                <li><a href="#login"><i class="fas fa-hands-helping"></i>Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" class="content">
         {% block content %}
-        <!-- Page-specific content goes here -->
+        <!-- Content for specific pages will be dynamically injected here -->
         {% endblock %}
     </main>
 
     <footer class="footer">
-        <p>© 2024 GameName. All rights reserved.</p>
+        <div class="footer-content">
+            <p>DreamerZz &copy; All rights 2024</p>
+            <div class="social-links">
+                <a href="https://github.com/YourRepo/DreamerZz" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/YourProfile" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://discord.com/invite/YourInvite" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        }
-    </script>
+    <!-- Link to the external JavaScript file -->
+    <script src="data/js/base.js"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 </html>

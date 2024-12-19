@@ -1,0 +1,75 @@
+/* Title Bar - Separate Element */
+.announcements-title-bar {
+    display: flex;
+	height: 30px;
+    justify-content: center;
+    margin: -8px auto; /* Move the title bar slightly on top of the announcements container */
+    position: relative; /* Enable positioning for z-index */
+    z-index: 3; /* Ensure it appears above the announcements bar */
+}
+
+/* Title styled as a button-like element with a dark blue shadow */
+.announcements-title {
+    background: var(--grey-2); 
+    color: var(--grey-5);
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    text-shadow: 0 0 10px var(--dark-blue); /* Dark blue text glow */
+    box-shadow: 0 0 15px var(--dark-blue), 0 0 10px rgba(0, 0, 0, 0.5); /* Adjusted full bar shadow */
+    pointer-events: none; /* Styled as a button but not clickable */
+    display: inline-block;
+    z-index: 3; /* Higher than announcements bar */
+}
+
+/* Announcements container */
+.announcements-container {
+    width: 88%;
+    margin: 0 auto;
+    position: relative; /* Enable positioning */
+    background: var(--dark-blue);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), var(--background-glow); /* Matches title glow */
+    overflow: visible; /* Ensure no clipping of shadows */
+}
+
+/* Announcements scrolling bar */
+.announcements-bar {
+    width: 100%;
+    height: 35px; /* Fixed height for announcements bar */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--grey-1);
+    border-radius: 10px;
+    padding: 0 10px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px var(--dark-blue); /* Matches title bar glow */
+    z-index: 1; /* Lower z-index than the title bar */
+}
+
+/* Announcements content */
+.announcements-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Announcement text */
+.announcement-text {
+    position: absolute;
+    white-space: nowrap;
+    color: var(--grey-5);
+    font-size: 1rem;
+    text-shadow: var(--text-glow);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(100%); /* Start off-screen to the right */
+    transition: transform 1s ease-in-out;
+}
